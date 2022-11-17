@@ -19,7 +19,7 @@ public class FinishLine : MonoBehaviour
  
     public void OnCollisionEnter2D(Collision2D other){
         if (other.gameObject.CompareTag("Player")){
-            SceneManager.LoadScene(SceneManager.sceneCount + 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // .sceneCount + 1);
         }
     }
 }
