@@ -5,6 +5,7 @@ using UnityEngine;
  
 public class FinishLine : MonoBehaviour
 {
+    public int count = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,8 @@ public class FinishLine : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D other){
         if (other.gameObject.CompareTag("Player")){
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // .sceneCount + 1);
+            count = count + 1;
+            Debug.Log(count);
         }
     }
 }
