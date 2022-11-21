@@ -33,6 +33,7 @@ public class FinishLine : MonoBehaviour
             //levelCount = (int)((JObject)fields.GetValue("level")).GetValue("integerValue");
 
             //numericalScore.GetComponent<Text>().text = "Score : " + scoreManager.score; 
+
             levelCount = levelCount + 1;
             levelText.text =  "Loop: " + levelCount.ToString();
             
