@@ -8,7 +8,7 @@ using System.Text;
 public class FinishLine : MonoBehaviour
 {
     public Text levelText;
-    public static int levelCount = 1;
+   // public static int levelCount = 1;
     private string test;
     // Start is called before the first frame update
     void Start()
@@ -34,12 +34,12 @@ public class FinishLine : MonoBehaviour
 
             //numericalScore.GetComponent<Text>().text = "Score : " + scoreManager.score; 
 
-            levelCount = levelCount + 1;
-            levelText.text =  "Loop: " + levelCount.ToString();
+            LevelCount.levelCount = LevelCount.levelCount + 1;
+            levelText.text =  "Loop: " + LevelCount.levelCount.ToString();
             
 
             Debug.Log("Timer initialized!!");
-            Debug.Log(levelCount);
+            Debug.Log(LevelCount.levelCount);
             
         }
     }
